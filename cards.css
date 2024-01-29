@@ -1,0 +1,90 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    background-color: darkred;
+
+    /* position: fixed; */
+    /* width: 100%; */
+}
+
+#section {
+    background-color: #131313;
+    width: 100dvw;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    padding: 1vw;
+}
+#section .grid {
+    position: relative;
+    /* height: auto; */
+    /* top: 2vh; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    /* background-color: brown; */
+    width: 95%;
+}
+#section .grid .card {
+    background-color: #1d1d1dec;
+    border-radius: 10px;
+    border: solid rgba(255, 255, 255, 0.527) 1px;
+    height: 35vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    /* border-radius: 30px; */
+}
+#section .grid .card .overlay {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.897));
+    overflow: hidden;
+    transition: 0.5s;
+}
+#section .grid .card .image-cover{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#section .grid .card .img-movie {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.5s;
+}
+
+#section .grid .card .movie-title {
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    bottom: 5%;
+    border-radius: 10px;
+    color: white;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s;
+}
+
